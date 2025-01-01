@@ -8,6 +8,17 @@
     padding: 0;
 }
 
+:root {
+    --text_color: rgb(20, 20, 20);
+    --text_color_hover: rgb(223, 24, 24);
+    --text_color_active: rgb(21, 83, 240);
+
+    --text_color_dark_mode: rgb(242, 242, 242);
+    --text_color_dark_mode_hover: rgb(168, 168, 168);
+    --text_color_dark_mode_active: rgb(244, 255, 175);
+}
+
+
 html {
     scroll-behavior: smooth; /* Smooth scrolling */
     font-size: 2vw;
@@ -21,6 +32,26 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: inherit; 
 }
 */
+
+.light_mode a {
+    color: var(--text_color);
+}
+.light_mode a:hover {
+    color: var(--text_color_hover);
+}
+.light_mode a:active {
+    color: var(--text_color_active);
+}
+
+.dark_mode a {
+    color: var(--text_color_dark_mode);
+}
+.dark_mode a:hover {
+    color: var(--text_color_dark_mode_hover);
+}
+.dark_mode a:active {
+    color: var(--text_color_dark_mode_active);
+}
 
 h1, h2, h3 {
     font-family: "Cinzel", serif;
@@ -38,7 +69,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 p {
@@ -155,7 +186,7 @@ body {
 }
 
 .acts_menu h2 {
-    padding: 0vw, 2vw;
+    padding: 0vw 0vw .5vw 0vw;
 }
 
 .scenes_menu {
