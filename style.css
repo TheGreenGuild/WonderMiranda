@@ -1,28 +1,26 @@
-
 /* Global reset */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --text_color: rgb(20, 20, 20);
-    --text_color_hover: rgb(223, 24, 24);
-    --text_color_active: rgb(21, 83, 240);
+  --text_color: rgb(20, 20, 20);
+  --text_color_hover: rgb(223, 24, 24);
+  --text_color_active: rgb(21, 83, 240);
 
-    --text_color_dark_mode: rgb(242, 242, 242);
-    --text_color_dark_mode_hover: rgb(168, 168, 168);
-    --text_color_dark_mode_active: rgb(244, 255, 175);
+  --text_color_dark_mode: rgb(242, 242, 242);
+  --text_color_dark_mode_hover: rgb(168, 168, 168);
+  --text_color_dark_mode_active: rgb(244, 255, 175);
 }
 
-
 html {
-    scroll-behavior: smooth; /* Smooth scrolling */
-    font-size: 2vw;
-    line-height: 1.5;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  font-size: 2vw;
+  line-height: 1.5;
 }
 
 /* Reset headings to match base font */
@@ -34,69 +32,70 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 .light_mode a {
-    color: var(--text_color);
+  color: var(--text_color);
 }
 .light_mode a:hover {
-    color: var(--text_color_hover);
+  color: var(--text_color_hover);
 }
 .light_mode a:active {
-    color: var(--text_color_active);
+  color: var(--text_color_active);
 }
 
 .dark_mode a {
-    color: var(--text_color_dark_mode);
+  color: var(--text_color_dark_mode);
 }
 .dark_mode a:hover {
-    color: var(--text_color_dark_mode_hover);
+  color: var(--text_color_dark_mode_hover);
 }
 .dark_mode a:active {
-    color: var(--text_color_dark_mode_active);
+  color: var(--text_color_dark_mode_active);
 }
 
-h1, h2, h3 {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;    
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 p {
-    margin: 0 0 1rem; /* Add default spacing below paragraphs */
+  margin: 0 0 1rem; /* Add default spacing below paragraphs */
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #383e4a; /* Optional background color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #383e4a; /* Optional background color */
 }
 
 .main_stage {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    aspect-ratio: 16 / 9; /* Desired aspect ratio */
-    background-color: #ffffff; /* Optional background for the container */
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  aspect-ratio: 16 / 9; /* Desired aspect ratio */
+  background-color: #ffffff; /* Optional background for the container */
 }
 
-
 /*400-900 weight. I can add more of these cinzel fonts if I want. */
-.cinzel-regular> {
+.cinzel-regular > {
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -104,94 +103,136 @@ body {
 }
 
 .cormorant-garamond-light {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .cormorant-garamond-regular {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .cormorant-garamond-medium {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .cormorant-garamond-semibold {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .cormorant-garamond-bold {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .cormorant-garamond-light-italic {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .cormorant-garamond-regular-italic {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .cormorant-garamond-medium-italic {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .cormorant-garamond-semibold-italic {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .cormorant-garamond-bold-italic {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
-  /* ----------- home_page ----------- */
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .main_stage.home_page {
-    background-image: url(assets/act_1_scene_3/BG12-cropped.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-  }
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
-  .home_page h1 {
-    display: flex; 
-    justify-content: center;
-    padding: 2rem;
-  }
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
 
-  .acts_menu {
-    display: flex;
-    justify-content: center;
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ----------- home_page ----------- */
+
+.main_stage.home_page {
+  background-image: url(assets/act_1_scene_3/BG12-cropped.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.home_page h1 {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.acts_menu {
+  display: flex;
+  justify-content: center;
 }
 
 .acts_menu h2 {
-    padding: 0vw 0vw .5vw 0vw;
+  padding: 0vw 0vw 0.5vw 0vw;
 }
 
 .scenes_menu {
-    padding: 4vw;
+  padding: 4vw;
 }
 
-  /* ----------- Act 1, Scene 1 ----------- */
+/* ----------- Act 1, Scene 1 ----------- */
 
+/* ----------- Act 1, Scene 2 ----------- */
+.act_1_scene_2 .wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 20vw;
+}
+
+.act_1_scene_2 .first_section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.act_1_scene_2 .foreground {
+    position: absolute;
+    width: 60vw;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10vw) scale(1.5);
+}
+
+.act_1_scene_2 .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-20vw) scale(2);
+}
+
+
+    
+section{ 
+    color: white;
+    background: #333;
+    font-size: 2rem;
+}
