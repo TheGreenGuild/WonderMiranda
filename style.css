@@ -10,13 +10,35 @@
 
 html {
     scroll-behavior: smooth; /* Smooth scrolling */
-    font-size: 16px;
+    font-size: 2vw;
     line-height: 1.5;
 }
 
+/* Reset headings to match base font */
+/*
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
-    font-weight: inherit; /* Reset headings to match base font */
+    font-weight: inherit; 
+}
+*/
+
+h1, h2, h3 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 p {
@@ -41,21 +63,8 @@ body {
     background-color: #ffffff; /* Optional background for the container */
 }
 
-h1 {
-    font:c
-}
-
-.acts_menu {
-    display: flex;
-
-}
-
-.scenes_menu {
-    padding: 4%;
-}
 
 /*400-900 weight. I can add more of these cinzel fonts if I want. */
-
 .cinzel-regular> {
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
@@ -123,3 +132,35 @@ h1 {
     font-style: italic;
   }
   
+
+  /* ----------- home_page ----------- */
+
+  .main_stage.home_page {
+    background-image: url(assets/act_1_scene_3/BG12-cropped.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .home_page h1 {
+    display: flex; 
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .acts_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.acts_menu h2 {
+    padding: 0vw, 2vw;
+}
+
+.scenes_menu {
+    padding: 4vw;
+}
+
+  /* ----------- Act 1, Scene 1 ----------- */
+
