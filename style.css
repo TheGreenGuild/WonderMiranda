@@ -94,6 +94,8 @@ body {
   background-color: #ffffff; /* Optional background for the container */
 }
 
+/* ----------- fonts ----------- */
+
 /*400-900 weight. I can add more of these cinzel fonts if I want. */
 .cinzel-regular > {
   font-family: "Cinzel", serif;
@@ -195,10 +197,10 @@ body {
 
 /* ----------- Act 1, Scene 2 ----------- */
 .act_1_scene_2 .wrapper {
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  perspective: 20vw;
+  perspective: 100vw;
 }
 
 .act_1_scene_2 .first_section {
@@ -215,24 +217,34 @@ body {
     position: absolute;
     width: 60vw;
     height: auto;
-    object-fit: cover;
     z-index: -1;
-    transform: translateZ(-10vw) scale(1.5);
+    transform: translateZ(-50vw) scale(1.5);
 }
+
 
 .act_1_scene_2 .background {
     position: absolute;
-    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: -1;
-    transform: translateZ(-20vw) scale(2);
+    transform: translateZ(-100vw) scale(2);
 }
 
 
-    
-section{ 
-    color: white;
-    background: #333;
-    font-size: 2rem;
+/* ----------- Depth classes for parallax ----------- */
+.z100 {
+    z-index: 10;
+    transform: translateZ(100vw) scale(.1);
+}
+.z50 {
+    z-index: 5;
+    transform: translateZ(50vw) scale(.5);
+}
+.z-50 {
+    z-index: -5;
+    transform: translateZ(-50vw) scale(1.5);
+}
+.z-100 {
+    z-index: -10;
+    transform: translateZ(-100vw) scale(2);
 }
