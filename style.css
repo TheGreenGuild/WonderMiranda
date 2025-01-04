@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth; /* Smooth scrolling */
-  font-size: 2vw;
+  font-size: 16px; /* Base font size */
   line-height: 1.5;
 }
 
@@ -87,8 +87,8 @@ body {
 }
 
 .main_stage {
-  width: 100%;
-  height: auto;
+  width: 1280px;
+  height: 720px;
   max-height: 100%;
   aspect-ratio: 16 / 9; /* Desired aspect ratio */
   background-color: #ffffff; /* Optional background for the container */
@@ -195,12 +195,14 @@ body {
 
 /* ----------- Act 1, Scene 1 ----------- */
 
+
+
 /* ----------- Act 1, Scene 2 ----------- */
 .act_1_scene_2 .wrapper {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  perspective: 100vw;
+  perspective: 100px;
 }
 
 .act_1_scene_2 .first_section {
@@ -209,20 +211,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   transform-style: preserve-3d;
+  border: blue 1px solid;
 }
 
 .act_1_scene_2 .first_background {
   width: 100%;
-  transform-origin: top center;
   position: absolute;
+  top: 0;
 }
 
 .act_1_scene_2 .establishing_shot {
     width: 60vw;
     position: relative;
-    top: 0;
 }
 
 .writing_no_hand{
@@ -236,36 +237,36 @@ body {
 /* ----------- Depth classes for parallax ----------- */
 .z100 {
     z-index: 10;
-    transform: translateZ(100vw) scale(.1);
+    transform: translateZ(100px) scale(.1);
 }
 
 .z50 {
     z-index: 5;
-    transform: translateZ(50vw) scale(.5);
+    transform: translateZ(50px) scale(.5);
 }
 .z-50 {
     z-index: -5;
-    transform: translateZ(-50vw) scale(1.5);
+    transform: translateZ(-50px) scale(1.5);
 }
 
 .z-60 {
   z-index: -6;
-  transform: translateZ(-60vw) scale(1.6);
+  transform: translateZ(-60px) scale(1.6);
 }
 
 .z-70 {
   z-index: -7;
-  transform: translateZ(-70vw) scale(1.7);
+  transform: translateZ(-70px) scale(1.7);
 }
 
 .z-100 {
     z-index: -10;
-    transform: translateZ(-100vw) scale(2);
+    transform: translateZ(-100px) scale(2);
 }
 
 /* ----------- Buffer and trigger boxes ----------- */
 .buffer {
-  width: 100vw;
+  width: 100px;
   height: 200px;
   background-color: rgb(223, 24, 24, 50%)
 }
