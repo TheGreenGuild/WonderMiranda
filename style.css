@@ -198,6 +198,8 @@ body {
 
 
 /* ----------- Act 1, Scene 2 ----------- */
+
+/*Sets up parralax within the wrapper I believe.*/
 .act_1_scene_2 .wrapper {
   height: 100%;
   overflow-y: auto;
@@ -219,7 +221,7 @@ body {
   width: 100%;
   position: absolute;
   z-index: -10;
-  transform: translateZ(-200px) translateY(3800px) scale(3);
+  transform: translateZ(-200px) translateY(3800px) scale(3); /*Adds parralax to the background*/
 }
 
 .act_1_scene_2 .establishing_shot {
@@ -266,8 +268,8 @@ body {
 }
 
 /* ----------- Buffer and trigger boxes ----------- */
-.buffer {
+.buffer-600{
   width: 100px;
-  height: 200px;
+  height: 600px;
   background-color: rgb(223, 24, 24, 50%)
 }
