@@ -218,7 +218,8 @@ body {
 .act_1_scene_2 .first_background {
   width: 100%;
   position: absolute;
-  top: 0;
+  z-index: -10;
+  transform: translateZ(-200px) translateY(3800px) scale(3);
 }
 
 .act_1_scene_2 .establishing_shot {
