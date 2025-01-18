@@ -243,46 +243,25 @@ body {
     position: relative;
 }
 
+.writing-rail {
+  height: 2000px;
+  width: 1200px;
+  outline: 2px solid red;
+}
+
 .writing_no_hand {
   width: 60vw;
-  position: relative;
+  position: sticky;
+  top: 50px;
+  outline: 2px solid rgb(215, 233, 13);
 }
 
 .writing {
   width: 60vw;
-  position: relative;
+  outline: 2px solid rgb(14, 169, 151);
+
 }
 
-
-/* ----------- Depth classes for parallax ----------- */
-.z100 {
-    z-index: 10;
-    transform: translateZ(100px) scale(.1);
-}
-
-.z50 {
-    z-index: 5;
-    transform: translateZ(50px) scale(.5);
-}
-.z-50 {
-    z-index: -5;
-    transform: translateZ(-50px) scale(1.5);
-}
-
-.z-60 {
-  z-index: -6;
-  transform: translateZ(-60px) scale(1.6);
-}
-
-.z-70 {
-  z-index: -7;
-  transform: translateZ(-70px) scale(1.7);
-}
-
-.z-100 {
-    z-index: -10;
-    transform: translateZ(-100px) scale(2);
-}
 
 /* ----------- Buffer and trigger boxes ----------- */
 
@@ -297,3 +276,35 @@ body {
   height: 600px;
   background-color: var(--testing_bufferblock_color);
 }
+
+
+
+/* ----------- Depth classes for parallax ----------- */
+/* .z100 {
+  z-index: 10;
+  transform: translateZ(100px) scale(.1);
+}
+
+.z50 {
+  z-index: 5;
+  transform: translateZ(50px) scale(.5);
+}
+.z-50 {
+  z-index: -5;
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.z-60 {
+z-index: -6;
+transform: translateZ(-60px) scale(1.6);
+}
+
+.z-70 {
+z-index: -7;
+transform: translateZ(-70px) scale(1.7);
+}
+
+.z-100 {
+  z-index: -10;
+  transform: translateZ(-100px) scale(2);
+} */
