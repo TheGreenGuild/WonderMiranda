@@ -383,32 +383,61 @@ body {
   /* align-items: center; */
 }
 
-.act_1_scene_2 .prospero-standing-cart{
-position: sticky;
-top: 5px;
-border: 4px solid plum;
+.act_1_scene_2 .prospero-standing-cart {
+  position: sticky;
+  top: 5px;
+  border: 4px solid plum;
 }
 
 .act_1_scene_2 .prospero-sitting img {
   height: 700px;
 }
 
-
 .act_1_scene_2 .prospero-standing {
-position: absolute;
-top: 0px;
-/* pre-animation */
-opacity: 0;
-transition: opacity 0.6s ease-out;
-transform: translateY(20px);
+  position: absolute;
+  top: 0px;
+  /* pre-animation */
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  transform: translateY(20px);
 }
 
 .act_1_scene_2 .prospero-standing.visible {
-opacity: 1;
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .act_1_scene_2 .prospero-standing img {
+  height: 700px;
+}
+
+.act_1_scene_2 .prospero-explains-rail {
+  position: relative;
+  border: 2px solid red;
+}
+
+.act_1_scene_2 .prospero-explains-cart {
+  position: sticky;
+  top: 5px;
+  border: 4px solid plum;
+}
+
+.act_1_scene_2 .prospero-explains img {
+  height: 700px;
+}
+
+.act_1_scene_2 .prospero-leaning-on-wall {
+  position: absolute;
+  top: 0px;
+  /* pre-animation */
+  opacity: 0;
+  transition: opacity 1.0s ease;
+}
+.act_1_scene_2 .prospero-leaning-on-wall.visible {
+  /* post animation */
+  opacity: 1;
+}
+.act_1_scene_2 .prospero-leaning-on-wall img {
   height: 700px;
 }
 
