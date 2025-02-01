@@ -22,32 +22,45 @@
   <body>
     <main class="main_stage light_mode act_1_scene_2">
       <!-- The wrapper is there so I can scroll in the wrapper -->
+
       <div class="wrapper">
-        <div class="first_section">
-          <img src="assets/act_1_scene_2/BG-9.jpg" class="first_background" />
+        <nav class="scene-header-navigation">
+          <ul>
+            <li><a href="">Wonder Miranda</a></li>
+            <li><a href="">Previous Scene</a></li>
+            <li><a href="">Next Scene</a></li>
+          </ul>
+        </nav>
 
-          <div class="buffer-600"></div>
+        <img src="assets/act_1_scene_2/BG-9.jpg" class="first_background" />
 
-          <div>
-            <img
-              src="assets/act_1_scene_2/F33-60.jpg"
-              class="establishing_shot"
-            />
+        <div class="buffer-300"></div>
+
+        <div>
+          <img
+            src="assets/act_1_scene_2/F33-60.jpg"
+            class="establishing_shot"
+          />
+        </div>
+
+        <div class="buffer-300"></div>
+
+        <div class="writing-rail">
+          <div class="writing-cart">
+            <div class="writing-no-hand">
+              <img src="assets/act_1_scene_2/F5-1.jpg" />
+            </div>
+
+            <div class="writing fade-in-image" id="writing-fade-in">
+              <img src="assets/act_1_scene_2/F5-2.jpg" />
+            </div>
           </div>
-
           <div class="buffer-300"></div>
-
-          <div class="writing-rail">
-            <div>
-              <img src="assets/act_1_scene_2/F5-1.jpg" class="writing_no_hand" />
-            </div>
-
-            <div>
-              <img src="assets/act_1_scene_2/F5-2.jpg" class="writing" />
-            </div>
-          </div>
-        </div> <!-- First section -->
-      </div> <!-- Wrapper -->
+          <div class="trigger buffer-600" data-target="writing-fade-in"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
+
+<script src="script.js"></script>

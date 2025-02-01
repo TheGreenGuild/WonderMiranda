@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test page to delete later</title>
-    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
 
-</head>
-<body>
-<main>
-    <div class="writing-rail">
-        <div class="buffer-300"><p>buffer 300 in here</p></div>
-        <div class="writing_no_hand">
-            <p style="color:white;">writing no hand</p>
-          <img src="assets/act_1_scene_2/F5-1.jpg" class="writing_no_hand" />
-        </div>
+      <div class="writing-rail">
+        <div class="writing-cart">
+          <div class="writing-no-hand">
+            <img src="assets/act_1_scene_2/F5-1.jpg" />
+          </div>
 
-        <div>
-            <p style="color:white;">writing with hand</p>
-          <img src="assets/act_1_scene_2/F5-2.jpg" class="writing" />
+          <div class="writing fade-in-image" id="writing-fade-in">
+            <img src="assets/act_1_scene_2/F5-2.jpg" />
+          </div>
         </div>
+        <div class="buffer-300"></div>
+        <div class="trigger buffer-600" data-target="writing-fade-in"></div>
+      </div>
       </div>
     </main>
-</body>
+  </body>
 </html>

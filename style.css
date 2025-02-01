@@ -1,3 +1,73 @@
+/* ----------- fonts ----------- */
+
+/*400-900 weight. I can add more of these cinzel fonts if I want. */
+.cinzel-regular > {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* Global reset */
 *,
 *::before,
@@ -84,87 +154,40 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #383e4a; /* Optional background color */
+  height: 100vh; 
+  background-color: #383e4a; 
 }
 
 .main_stage {
   width: 1280px;
   height: 720px;
-  max-height: 100%;
-  aspect-ratio: 16 / 9; /* Desired aspect ratio */
-  background-color: #ffffff; /* Optional background for the container */
+  background-color: #d9d9d97f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow-y: auto;
 }
 
-/* ----------- fonts ----------- */
-
-/*400-900 weight. I can add more of these cinzel fonts if I want. */
-.cinzel-regular > {
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.scene-header-navigation {
+  height: 200px;
+  width: 100%;
+  flex-shrink: 0;
+  background-color: rgba(255, 127, 80, 0.297);
+  padding: 32px;
 }
 
-.cormorant-garamond-light {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: normal;
+.scene-header-navigation ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  position: sticky;
+  top: 20px;
+  left: 20px;
 }
 
-.cormorant-garamond-regular {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+.scene-header-navigation ul li a{
+text-decoration: none;
 
-.cormorant-garamond-medium {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.cormorant-garamond-semibold {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.cormorant-garamond-bold {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.cormorant-garamond-light-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.cormorant-garamond-regular-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.cormorant-garamond-medium-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.cormorant-garamond-semibold-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.cormorant-garamond-bold-italic {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-style: italic;
 }
 
 /* ----------- home_page ----------- */
@@ -189,11 +212,11 @@ body {
 }
 
 .acts_menu h2 {
-  padding: 0vw 0vw 0.5vw 0vw;
+  padding: 0px 0px 12px 0px;
 }
 
 .scenes_menu {
-  padding: 4vw;
+  padding: 64px;
 }
 
 /* ----------- Act 1, Scene 1 ----------- */
@@ -203,11 +226,14 @@ body {
 /* ----------- Act 1, Scene 2 ----------- */
 
 /*Sets up parralax within the wrapper I believe.*/
-.act_1_scene_2 .wrapper {
+.wrapper {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   perspective: 100px;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
 }
 
  /* Hide scrollbar for Chrome, Safari and Opera */
@@ -217,94 +243,103 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .wrapper {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  /*-ms-overflow-style: none;*/  /* IE and Edge */
+  /*scrollbar-width: none;*/  /* Firefox */
 } 
 
-.act_1_scene_2 .first_section {
+.first_section {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  border: blue 1px solid;
+  border: blue 3px solid;
 }
 
 .act_1_scene_2 .first_background {
+  align-self: center;
   width: 100%;
   position: absolute;
   z-index: -10;
-  transform: translateZ(-200px) translateY(3800px) scale(3); /*Adds parralax to the background*/
+  transform: translateZ(-200px) translateY(2800px) scale(3); /*Adds parralax to the background*/
 }
 
 .act_1_scene_2 .establishing_shot {
-    width: 60vw;
+    width: 1200px;
     position: relative;
 }
 
 .writing-rail {
-  height: 2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 2000px; */
   width: 1200px;
   outline: 2px solid red;
+  flex-shrink: 0;
 }
 
-.writing_no_hand {
-  width: 60vw;
+.writing-cart {
   position: sticky;
-  top: 50px;
+  top: 60px;
+  border: 1px solid plum;
+}
+
+.writing-no-hand {
+  /* position: sticky;
+  top: 10px; */
+  width: 1000px;
   outline: 2px solid rgb(215, 233, 13);
 }
 
-.writing {
-  width: 60vw;
-  outline: 2px solid rgb(14, 169, 151);
-
+.writing-no-hand img {
+  width: 1000px;
 }
 
+.writing {
+  position: absolute;
+  top: 0px; 
+  width: 1000px;
+  outline: 2px solid rgb(14, 169, 151);
+}
+
+.writing img {
+  width: 1000px;
+}
+
+.fade-in-image {
+  opacity: 0; /* Hidden initially */
+  transform: translateY(20px); /* Slightly shifted down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+  transition-delay: 0.4s;
+}
+
+.fade-in-image.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Back to original position */
+}
 
 /* ----------- Buffer and trigger boxes ----------- */
 
+.act_1_scene_2 .trigger {
+  background-color: rgba(67, 206, 86, 0.308);
+}
+
 .buffer-300{
-  width: 100px;
+  flex-shrink:0;
+  width: 100%;
   height: 300px;
   background-color: var(--testing_bufferblock_color);
 }
 
 .buffer-600{
-  width: 100px;
+  flex-shrink:0;
+  width: 100%;
   height: 600px;
   background-color: var(--testing_bufferblock_color);
 }
 
-
-
-/* ----------- Depth classes for parallax ----------- */
-/* .z100 {
-  z-index: 10;
-  transform: translateZ(100px) scale(.1);
+.trigger {
+  background-color: rgba(0, 128, 0, 0.236);
 }
-
-.z50 {
-  z-index: 5;
-  transform: translateZ(50px) scale(.5);
-}
-.z-50 {
-  z-index: -5;
-  transform: translateZ(-50px) scale(1.5);
-}
-
-.z-60 {
-z-index: -6;
-transform: translateZ(-60px) scale(1.6);
-}
-
-.z-70 {
-z-index: -7;
-transform: translateZ(-70px) scale(1.7);
-}
-
-.z-100 {
-  z-index: -10;
-  transform: translateZ(-100px) scale(2);
-} */
