@@ -56,7 +56,10 @@
             </div>
           </div>
           <div class="buffer-600"></div>
-          <div class="trigger buffer-300" data-target="writing-fade-in"></div>
+          <div
+            class="trigger buffer-300"
+            data-toggle-visible="writing-fade-in"
+          ></div>
         </div>
 
         <div class="relief medium">
@@ -83,7 +86,10 @@
           </div>
 
           <div class="buffer-300"></div>
-          <div class="trigger buffer-300" data-target="prospero-standing"></div>
+          <div
+            class="trigger buffer-300"
+            data-toggle-visible="prospero-standing"
+          ></div>
         </div>
 
         <div class="buffer-150"></div>
@@ -104,7 +110,7 @@
           <div class="buffer-300"></div>
           <div
             class="trigger buffer-300"
-            data-target="prospero-leaning-on-wall"
+            data-toggle-visible="prospero-leaning-on-wall"
           ></div>
         </div>
 
@@ -117,34 +123,98 @@
 
             <div class="flashback-1" id="flashback-1">
               <img src="/assets/act_1_scene_2/F12.jpg" />
-              <p>Your father once had the ear of the king, and the knowledge of the world at his fingertips.</p>
+              <p>
+                Your father once had the ear of the king, and the knowledge of
+                the world at his fingertips.
+              </p>
             </div>
 
             <div class="flashback-2" id="flashback-2">
               <img src="/assets/act_1_scene_2/F14.jpg" />
-              <p>But kings may turn to cruelty in the name of power</p>
+              <p>But kings may turn to cruelty in the name of power.</p>
             </div>
 
             <div class="flashback-3" id="flashback-3">
-              <img src="/assets/act_1_scene_2/F15.jpg"/>
-              <p>You were cast to the sea, to be killed or forgotten - whichever came first.</p>
+              <img src="/assets/act_1_scene_2/F15.jpg" />
+              <p>
+                You were cast to the sea, to be killed or forgotten - whichever
+                came first.
+              </p>
             </div>
 
             <div class="flashback-4" id="flashback-4">
               <img src="/assets/act_1_scene_2/F16.jpg" />
               <p>But you're still here, and your father refuses to forget.</p>
             </div>
-
           </div>
 
-          <!-- I'm having and issue because the first trigger is leaving the screen
-           before the last trigger comes into it. -->
-          <div class="buffer-150 trigger" data-target="flashback-cart"></div>
-          <div class="buffer-300 trigger" data-target="flashback-1"></div>
-          <div class="buffer-300 trigger" data-target="flashback-2"></div>
-          <div class="buffer-300 trigger" data-target="flashback-3"></div>
-          <div class="buffer-300 trigger" data-target="flashback-4"></div>
+          <div
+            class="buffer-150 add-trigger"
+            data-add-visible="flashback-cart"
+          ></div>
+          <div
+            class="buffer-300 trigger"
+            data-toggle-visible="flashback-1"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-2"
+            data-remove-visible="flashback-1"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-3"
+            data-remove-visible="flashback-2"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-4"
+            data-remove-visible="flashback-3"
+          ></div>
         </div>
+
+        <div
+          class="buffer-150 remove-trigger"
+          data-remove-visible="flashback-cart"
+        ></div>
+
+        <div class="miranda-reaction-rail">
+
+          <div class="miranda-reaction-cart">
+
+            <div class="miranda-reaction-1">
+              <img src="/assets/act_1_scene_2/F17.jpg" />
+              <p>
+                The men on the ship are the same from his story. Now they face
+                his punishment - but he has spared them.
+              </p>
+            </div>
+
+            <div class="miranda-reaction-2" id="miranda-reaction-2">
+              <img src="/assets/act_1_scene_2/F17.1.jpg" />
+              <p>
+                He says he loves you. But is love meant to feel like a storm?
+              </p>
+            </div>
+
+            <div class="miranda-reaction-2" id="miranda-reaction-3">
+              <img src="/assets/act_1_scene_2/F17.2.jpg" />
+              <p>
+                You catch a glimpse of light out of the corner of your eye. So
+                does your father.
+              </p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="buffer-300"></div>
+        <div
+          class="trigger buffer-300"
+          data-toggle-visible="miranda-reaction-2"
+        ></div>
       </div>
       <!-- ^ end of wrapper. Don't cross this div-->
     </main>
