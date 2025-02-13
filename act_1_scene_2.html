@@ -93,11 +93,11 @@
         <div class="prospero-explains-rail">
           <div class="prospero-explains-cart">
             <div class="prospero-explains">
-              <img src="/assets/act_1_scene_2/F10.jpg"/>
+              <img src="/assets/act_1_scene_2/F10.jpg" />
             </div>
 
             <div class="prospero-leaning-on-wall" id="prospero-leaning-on-wall">
-              <img src="/assets/act_1_scene_2/F11.jpg"/>
+              <img src="/assets/act_1_scene_2/F11.jpg" />
             </div>
           </div>
 
@@ -109,8 +109,42 @@
         </div>
 
         <div class="buffer-150"></div>
-        <p class="copy-2">But he explains his reason for the storm.</p>
+        <p class="copy-1half">But he explains his reason for the storm.</p>
 
+        <div class="flashback-rail">
+          <div class="flashback-cart" id="flashback-cart">
+            <div class="black-background"></div>
+
+            <div class="flashback-1" id="flashback-1">
+              <img src="/assets/act_1_scene_2/F12.jpg" />
+              <p>Your father once had the ear of the king, and the knowledge of the world at his fingertips.</p>
+            </div>
+
+            <div class="flashback-2" id="flashback-2">
+              <img src="/assets/act_1_scene_2/F14.jpg" />
+              <p>But kings may turn to cruelty in the name of power</p>
+            </div>
+
+            <div class="flashback-3" id="flashback-3">
+              <img src="/assets/act_1_scene_2/F15.jpg"/>
+              <p>You were cast to the sea, to be killed or forgotten - whichever came first.</p>
+            </div>
+
+            <div class="flashback-4" id="flashback-4">
+              <img src="/assets/act_1_scene_2/F16.jpg" />
+              <p>But you're still here, and your father refuses to forget.</p>
+            </div>
+
+          </div>
+
+          <!-- I'm having and issue because the first trigger is leaving the screen
+           before the last trigger comes into it. -->
+          <div class="buffer-150 trigger" data-target="flashback-cart"></div>
+          <div class="buffer-300 trigger" data-target="flashback-1"></div>
+          <div class="buffer-300 trigger" data-target="flashback-2"></div>
+          <div class="buffer-300 trigger" data-target="flashback-3"></div>
+          <div class="buffer-300 trigger" data-target="flashback-4"></div>
+        </div>
       </div>
       <!-- ^ end of wrapper. Don't cross this div-->
     </main>
