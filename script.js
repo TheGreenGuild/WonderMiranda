@@ -14,40 +14,52 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const toggleObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // Find the corresponding image using the data-toggle-visible attribute
-        const targetImage = document.querySelector(`#${entry.target.dataset.toggleVisible}`);
-  
-        if (entry.isIntersecting && targetImage) {
-          // Add the 'visible' class to the target when the trigger enters the viewport
-          targetImage.classList.add('visible');
-        } else if (targetImage) {
-          // Remove the 'visible' class when the trigger leaves the viewport
-          targetImage.classList.remove('visible');
-        }
+        // Find the corresponding images using the data-toggle-visible attribute
+        const targetIds = entry.target.dataset.toggleVisible.split(',');
+
+        targetIds.forEach(id => {
+          const targetImage = document.querySelector(`#${id.trim()}`);
+
+          if (entry.isIntersecting && targetImage) {
+            // Add the 'visible' class to the target when the trigger enters the viewport
+            targetImage.classList.add('visible');
+          } else if (targetImage) {
+            // Remove the 'visible' class when the trigger leaves the viewport
+            targetImage.classList.remove('visible');
+          }
+        });
       });
     });
 
     const removeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // Find the corresponding image using the data-remove-visible attribute
-        const targetImage = document.querySelector(`#${entry.target.dataset.removeVisible}`);
-  
-        if (entry.isIntersecting && targetImage) {
-          // Remove the 'visible' class when the remove-trigger enters the viewport
-          targetImage.classList.remove('visible');
-        }
+        // Find the corresponding images using the data-remove-visible attribute
+        const targetIds = entry.target.dataset.removeVisible.split(',');
+
+        targetIds.forEach(id => {
+          const targetImage = document.querySelector(`#${id.trim()}`);
+
+          if (entry.isIntersecting && targetImage) {
+            // Remove the 'visible' class when the remove-trigger enters the viewport
+            targetImage.classList.remove('visible');
+          }
+        });
       });
     });
 
     const addObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        // Find the corresponding image using the data-add-visible attribute
-        const targetImage = document.querySelector(`#${entry.target.dataset.addVisible}`);
-  
-        if (entry.isIntersecting && targetImage) {
-          // Add the 'visible' class when the add-trigger enters the viewport
-          targetImage.classList.add('visible');
-        }
+        // Find the corresponding images using the data-add-visible attribute
+        const targetIds = entry.target.dataset.addVisible.split(',');
+
+        targetIds.forEach(id => {
+          const targetImage = document.querySelector(`#${id.trim()}`);
+
+          if (entry.isIntersecting && targetImage) {
+            // Add the 'visible' class when the add-trigger enters the viewport
+            targetImage.classList.add('visible');
+          }
+        });
       });
     });
   
