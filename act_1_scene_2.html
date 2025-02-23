@@ -181,16 +181,17 @@
 
         <img src="assets/act_1_scene_2/BG-9.jpg" class="second_background" />
 
-
         <div class="miranda-reaction-rail">
-
           <div class="miranda-reaction-cart">
-
-            <div class="miranda-reaction-1 add-trigger" id="miranda-reaction-1" data-add-visible="miranda-reaction-1">
+            <div
+              class="miranda-reaction-1 trigger"
+              id="miranda-reaction-1"
+              data-add-visible="miranda-reaction-1"
+            >
               <img src="/assets/act_1_scene_2/F17.jpg" />
               <p>
-                The men on the ship are the same from his story. <br>Now they face
-                his punishment - but he has spared them.
+                The men on the ship are the same from his story. <br />Now they
+                face his punishment - but he has spared them.
               </p>
             </div>
 
@@ -211,12 +212,42 @@
           </div>
 
           <!-- Inside the rail -->
-          <div class="buffer-300 add-trigger remove-trigger" data-remove-visible="miranda-reaction-1" data-add-visible="miranda-reaction-2"></div>
-          
+          <div class="buffer-300"></div>
+          <div
+            class="buffer-300 trigger"
+            data-remove-visible="miranda-reaction-1"
+            data-add-visible="miranda-reaction-2"
+          ></div>
+          <div
+            class="buffer-300 trigger"
+            data-remove-visible="miranda-reaction-2"
+            data-add-visible="miranda-reaction-3"
+          ></div>
           <!-- Inside the rail -->
         </div>
 
-        
+        <div class="ariel-gif">
+          <img src="assets/act_1_scene_2/ariel-gif-2.gif" />
+        </div>
+
+        <p class="ending-text-1">Before you can react –</p>
+
+        <div class="starry-sky" data-add-visible="starry-sky-img">
+          <img id="starry-sky-img" src="assets/act_1_scene_3/BG12-cropped.jpg"/>
+          <p class="ending-text-2"  id="ending-text-2" data-add-visible="ending-text-2">
+            A heaviness takes you. The darkness is calm, fabricated, and all too
+            familiar.
+          </p>
+          <p class="ending-text-3" id="ending-text-3" data-add-visible="ending-text-3">"More to know did never meddle with my thoughts." 1.2.25-26</p>
+          <p class="ending-text-4" id="ending-text-4" data-add-visible="ending-text-4">
+            Or at least, so you tell your father. But your thoughts have become
+            wild winged creatures.
+          </p>
+          <p class="next-scene-button" id="next-scene-button" data-add-visible="next-scene-button">Next Scene</p>
+        </div>
+
+
+
       </div>
       <!-- ^ end of wrapper. Don't cross this div-->
     </main>

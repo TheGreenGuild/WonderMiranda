@@ -544,7 +544,6 @@ body {
 .act_1_scene_2 .miranda-reaction-1 p,
 .act_1_scene_2 .miranda-reaction-2 p,
 .act_1_scene_2 .miranda-reaction-3 p {
-  color: rgb(255, 0, 0);
   font-size: 2rem;
   text-align: center;
 }
@@ -582,6 +581,89 @@ body {
   width: 800px;
 }
 
+.act_1_scene_2 .ariel-gif {
+  padding: 100px;
+}
+
+.ending-text-1 {
+  padding-bottom: 100px;
+}
+
+.act_1_scene_2 .ending-text-1,
+.act_1_scene_2 .ending-text-2,
+.act_1_scene_2 .ending-text-3,
+.act_1_scene_2 .ending-text-4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.act_1_scene_2 .starry-sky {
+  position: sticky;
+  top: -1000px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 1800px;
+  /* display: sticky; */
+  /* bottom: 10px; */
+}
+
+.act_1_scene_2 .starry-sky img {
+  /* pre animation */
+  opacity: 0;
+  transition: opacity 2.0s ease-out;
+  transform: translateY(200px);
+}
+
+.act_1_scene_2 .starry-sky img.visible {
+  /* post animation */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.act_1_scene_2 .starry-sky.visible {
+  /* post animation */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.act_1_scene_2 .starry-sky p {
+  color: white;
+  opacity: 0;
+  transition: opacity 1.0s ease-out;
+}
+
+.act_1_scene_2 .starry-sky p.visible {
+  opacity: 1;
+}
+
+.act_1_scene_2 .ending-text-2 {
+  position: absolute;
+  top: 300px;
+}
+.act_1_scene_2 .ending-text-3 {
+  position: absolute;
+  top: 600px;
+}
+.act_1_scene_2 .ending-text-4 {
+  position: absolute;
+  top: 900px;
+}
+
+.act_1_scene_2 .next-scene-button {
+  position: absolute;
+  top: 1320px;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 1.0s ease-out;
+}
+
+.act_1_scene_2 .next-scene-button.visible {
+  opacity: 1;
+}
 
 /* ----------- Buffer and trigger boxes ----------- */
 
