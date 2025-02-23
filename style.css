@@ -544,7 +544,7 @@ body {
 .act_1_scene_2 .miranda-reaction-1 p,
 .act_1_scene_2 .miranda-reaction-2 p,
 .act_1_scene_2 .miranda-reaction-3 p {
-  color: red;
+  color: rgb(255, 0, 0);
   font-size: 2rem;
   text-align: center;
 }
