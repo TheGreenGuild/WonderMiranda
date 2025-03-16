@@ -1,0 +1,27 @@
+.main_stage.home_page {
+    background-image: url(assets/act_1_scene_3/BG12-cropped.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+  
+  .home_page h1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .acts_menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .acts_menu h2 {
+    padding: 0px 0px 12px 0px;
+  }
+  
+  .scenes_menu {
+    padding: 64px;
+  }
+  

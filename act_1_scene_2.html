@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wonder Miranda home page menu</title>
+    <title>Wonder Miranda Act 1 Scene 2</title>
+
+    <!-- Global styles -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Page specific styles -->
+    <link href="act_1_scene_2.css" rel="stylesheet" />
+
     <script src="script.js"></script>
 
     <!-- Cinzel and Cormorant Garamond Fonts -->
@@ -20,25 +26,262 @@
     <link rel="apple-touch-icon" href="assets/icons/webclip.png" />
   </head>
   <body>
-
     <main class="main_stage light_mode act_1_scene_2">
       <!-- The wrapper is there so I can scroll in the wrapper -->
+
       <div class="wrapper">
+        <nav class="scene-header-navigation">
+          <ul>
+            <li><a href="index.html">Wonder Miranda</a></li>
+            <li><a href="act_1_scene_1.html">Previous Scene</a></li>
+            <li><a href="">Next Scene</a></li>
+          </ul>
+        </nav>
 
-        <div class="first_section">
-          <img src="assets/act_1_scene_2/BG-9.jpg" class="first_background">
+        <img src="assets/act_1_scene_2/BG-9.jpg" class="first_background" />
 
-          <div>
-            <img src="assets/act_1_scene_2/F33-60.jpg" class="establishing_shot">
+        <div class="buffer-300"></div>
+
+        <div>
+          <img
+            src="assets/act_1_scene_2/F33-60.jpg"
+            class="establishing_shot"
+          />
+        </div>
+
+        <div class="buffer-300"></div>
+
+        <div class="writing-rail">
+          <div class="writing-cart">
+            <div class="writing-no-hand">
+              <img src="assets/act_1_scene_2/F5-1.jpg" />
+            </div>
+
+            <div class="writing fade-in-image" id="writing-fade-in">
+              <img src="assets/act_1_scene_2/F5-2.jpg" />
+            </div>
           </div>
 
-          <div> 
-            <img src="assets/act_1_scene_2/F5-1.jpg"> 
-          </div>
-          
-        </div> <!-- First section -->
-      </div> <!-- Wrapper -->
+          <div class="buffer-600"></div>
+          <div
+            class="trigger buffer-300"
+            data-toggle-visible="writing-fade-in"
+          ></div>
+        </div>
 
+        <div class="relief medium">
+          <p class="copy-2half">You demand relief.</p>
+        </div>
+
+        <div class="angry-miranda">
+          <img src="/assets/act_1_scene_2/F6.jpg" />
+        </div>
+
+        <div class="justice medium">
+          <p class="copy-2half">Justice.</p>
+        </div>
+
+        <div class="prospero-standing-rail">
+          <div class="prospero-standing-cart">
+            <div class="prospero-sitting">
+              <img src="/assets/act_1_scene_2/F8.jpg" />
+            </div>
+
+            <div class="prospero-standing" id="prospero-standing">
+              <img src="/assets/act_1_scene_2/F9.jpg" />
+            </div>
+          </div>
+
+          <div class="buffer-300"></div>
+          <div
+            class="trigger buffer-300"
+            data-toggle-visible="prospero-standing"
+          ></div>
+        </div>
+
+        <div class="buffer-150"></div>
+        <p class="copy-2">He tells you justice belongs to him.</p>
+        <div class="buffer-150"></div>
+
+        <div class="prospero-explains-rail">
+          <div class="prospero-explains-cart">
+            <div class="prospero-explains">
+              <img src="/assets/act_1_scene_2/F10.jpg" />
+            </div>
+
+            <div class="prospero-leaning-on-wall" id="prospero-leaning-on-wall">
+              <img src="/assets/act_1_scene_2/F11.jpg" />
+            </div>
+          </div>
+
+          <div class="buffer-300"></div>
+          <div
+            class="trigger buffer-300"
+            data-toggle-visible="prospero-leaning-on-wall"
+          ></div>
+        </div>
+
+        <div class="buffer-150"></div>
+        <p class="copy-1half">But he explains his reason for the storm.</p>
+
+        <div class="flashback-rail">
+          <div class="flashback-cart" id="flashback-cart">
+            <div class="black-background"></div>
+
+            <div class="flashback-1" id="flashback-1">
+              <img src="/assets/act_1_scene_2/F12.jpg" />
+              <p>
+                Your father once had the ear of the king, and the knowledge of
+                the world at his fingertips.
+              </p>
+            </div>
+
+            <div class="flashback-2" id="flashback-2">
+              <img src="/assets/act_1_scene_2/F14.jpg" />
+              <p>But kings may turn to cruelty in the name of power.</p>
+            </div>
+
+            <div class="flashback-3" id="flashback-3">
+              <img src="/assets/act_1_scene_2/F15.jpg" />
+              <p>
+                You were cast to the sea, to be killed or forgotten - whichever
+                came first.
+              </p>
+            </div>
+
+            <div class="flashback-4" id="flashback-4">
+              <img src="/assets/act_1_scene_2/F16.jpg" />
+              <p>But you're still here, and your father refuses to forget.</p>
+            </div>
+          </div>
+
+          <div
+            class="buffer-150 add-trigger"
+            data-add-visible="flashback-cart"
+          ></div>
+          <div
+            class="buffer-300 trigger"
+            data-toggle-visible="flashback-1"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-2"
+            data-remove-visible="flashback-1"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-3"
+            data-remove-visible="flashback-2"
+          ></div>
+          <div
+            class="buffer-300 trigger remove-trigger"
+            data-toggle-visible="flashback-4"
+            data-remove-visible="flashback-3"
+          ></div>
+        </div>
+
+        <div
+          class="buffer-150 remove-trigger"
+          data-remove-visible="flashback-cart"
+        ></div>
+
+        <img
+          src="assets/act_1_scene_2/BG-9.jpg"
+          class="second_background"
+          id="second_background"
+        />
+
+        <div class="miranda-reaction-rail">
+          <div class="miranda-reaction-cart">
+            <div
+              class="miranda-reaction-1 trigger"
+              id="miranda-reaction-1"
+              data-add-visible="miranda-reaction-1"
+            >
+              <img src="/assets/act_1_scene_2/F17.jpg" />
+              <p>
+                The men on the ship are the same from his story. <br />Now they
+                face his punishment - but he has spared them.
+              </p>
+            </div>
+
+            <div class="miranda-reaction-2" id="miranda-reaction-2">
+              <img src="/assets/act_1_scene_2/F17.1.jpg" />
+              <p>
+                He says he loves you. But is love meant to feel like a storm?
+              </p>
+            </div>
+
+            <div class="miranda-reaction-2" id="miranda-reaction-3">
+              <img src="/assets/act_1_scene_2/F17.2.jpg" />
+              <p>
+                You catch a glimpse of light out of the corner of your eye. So
+                does your father.
+              </p>
+            </div>
+          </div>
+
+          <!-- Inside the rail -->
+          <div class="buffer-300"></div>
+          <div
+            class="buffer-300 trigger"
+            data-remove-visible="miranda-reaction-1"
+            data-add-visible="miranda-reaction-2"
+          ></div>
+          <div
+            class="buffer-300 trigger"
+            data-remove-visible="miranda-reaction-2"
+            data-add-visible="miranda-reaction-3"
+          ></div>
+          <!-- Inside the rail -->
+        </div>
+
+        <div class="ariel-gif">
+          <img src="assets/act_1_scene_2/ariel-gif-2.gif" />
+        </div>
+
+        <p class="ending-text-1">Before you can react –</p>
+
+        <div class="starry-sky" data-add-visible="starry-sky-img">
+          <img
+            id="starry-sky-img"
+            src="assets/act_1_scene_3/BG12-cropped.jpg"
+          />
+          <p
+            class="ending-text-2"
+            id="ending-text-2"
+            data-add-visible="ending-text-2"
+          >
+            A heaviness takes you. The darkness is calm, fabricated, and all too
+            familiar.
+          </p>
+          <p
+            class="ending-text-3"
+            id="ending-text-3"
+            data-add-visible="ending-text-3"
+          >
+            "More to know did never meddle with my thoughts." 1.2.25-26
+          </p>
+          <p
+            class="ending-text-4"
+            id="ending-text-4"
+            data-add-visible="ending-text-4"
+          >
+            Or at least, so you tell your father. But your thoughts have become
+            wild winged creatures.
+          </p>
+          <p
+            class="next-scene-button"
+            id="next-scene-button"
+            data-add-visible="next-scene-button"
+          >
+            Next Scene
+          </p>
+        </div>
+      </div>
+      <!-- ^ end of wrapper. Don't cross this div-->
     </main>
   </body>
 </html>
+
+<script src="script.js"></script>
