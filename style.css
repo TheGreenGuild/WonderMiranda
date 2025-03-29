@@ -264,6 +264,20 @@ body {
   background-color: var(--testing_bufferblock_color);
 }
 
+.buffer-400 {
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--testing_bufferblock_color);
+}
+
+.buffer-500 {
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--testing_bufferblock_color);
+}
+
 .buffer-600 {
   flex-shrink: 0;
   width: 100%;

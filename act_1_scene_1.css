@@ -10,10 +10,22 @@
     align-items: center;
   } */
 
+.main_stage {
+    /* background-color: rgb(97, 105, 51); */
+    overflow: hidden;
+}
+
+.scene-header-navigation {
+    z-index: 2;
+}
+
 .foreground-rain {
     position: fixed;
+    width: 100%;
     top: 0px;
     z-index: 1;
+    pointer-events: none; /* Makes the rain invisible to mouse interactions */
+    object-fit: cover;
 }
 
 .first_background {
@@ -24,6 +36,18 @@
   transform: translateZ(-200px) translateY(1450px) scale(3); /*Adds parralax to the background*/
 }
 
+.act-header {
+    color: white;
+    font-size: 8rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
 .miranda-face {
     width: 50%;
+    z-index: -9;
+    transform: translateZ(-100px) translateY(200px) scale(2); /*Adds parralax to the background*/
 }
