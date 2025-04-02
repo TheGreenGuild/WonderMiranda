@@ -26,6 +26,7 @@
     z-index: 1;
     pointer-events: none; /* Makes the rain invisible to mouse interactions */
     object-fit: cover;
+    opacity: 60%;
 }
 
 .first_background {
