@@ -13,6 +13,7 @@
   <link href="act_1_scene_1.css" rel="stylesheet" />
 
   <script src="script.js"></script>
+  <script src="test_page.js"></script>
 
   <!-- Cinzel and Cormorant Garamond Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +59,8 @@
 
       <div class="prospero-casting-rail">
         <div class="prospero-casting-cart">
-          <img src="assets/act_1_scene_1/bg-4-prospero-1-cropped.png" id="prospero-casting-1" data-add-visible="prospero-casting-1">
+          <img src="assets/act_1_scene_1/bg-4-prospero-1-cropped.png" id="prospero-casting-1"
+            data-add-visible="prospero-casting-1">
           <img src="assets/act_1_scene_1/bg-4-prospero-2-cropped.png" id="prospero-casting-2">
           <img src="assets/act_1_scene_1/f2.png" id="miranda-reaching-1">
           <img src="assets/act_1_scene_1/f3.png" id="miranda-reaching-2">
@@ -66,19 +68,20 @@
         </div>
 
         <div class="buffer-150"></div>
-        <div class="buffer-150 trigger" data-toggle-visible="prospero-casting-2, miranda-reaching-1" data-remove-visible="prospero-casting-1"></div>
+        <div class="buffer-150 trigger" data-toggle-visible="prospero-casting-2, miranda-reaching-1"
+          data-remove-visible="prospero-casting-1"></div>
         <div class="buffer-150 trigger" data-toggle-visible="miranda-reaching-1, miranda-reaching-2"></div>
         <!-- lets put the triggers here that make the cart show the right stuff. Maybe even reversable.  -->
-         <!-- Maybe the triggers are only able to work on a div and not an individual image? -->
+        <!-- Maybe the triggers are only able to work on a div and not an individual image? -->
       </div>
 
-<!-- Maybe with this I need to just have the logic for the page let me turn visible off. Right now if trigger 1 is adding visible while the trigger is on the page,
+      <!-- Maybe with this I need to just have the logic for the page let me turn visible off. Right now if trigger 1 is adding visible while the trigger is on the page,
  I want 2 visible triggers to cancel each other out.   -->
 
       <img src="../assets/act_1_scene_1/bg8.png">
 
       <!-- Then text and the brave ship pick which is F4. -->
-      
+
     </div>
     <!-- ^ end of wrapper. Don't cross this div-->
   </main>
