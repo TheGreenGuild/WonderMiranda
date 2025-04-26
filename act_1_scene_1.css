@@ -71,6 +71,17 @@ p {
 #prospero-casting-1.visible {
   opacity: 1;
 }
+#father-raises-voice {
+  position: absolute;
+  bottom: 580px;
+  left: 200px;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+#father-raises-voice.active {
+  opacity: 1;
+}
+
 #prospero-casting-2 {
   position: absolute;
   bottom: 0px;
@@ -80,6 +91,22 @@ p {
 #prospero-casting-2.visible {
   opacity: 1;
 }
+
+#anger-is-power {
+  position: absolute;
+  bottom: 580px;
+  left: 300px;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+#anger-is-power.visible {
+  opacity: 1;
+  position: absolute;
+  bottom: 580px;
+  left: 300px;
+}
+
 #miranda-reaching-1 {
   position: absolute;
   bottom: -320px;
@@ -89,6 +116,13 @@ p {
 #miranda-reaching-1.visible {
   opacity: 1;
 }
+
+ {
+  position: absolute;
+  bottom: 580px;
+  left: 400px;
+}
+
 #miranda-reaching-2 {
   position: absolute;
   bottom: -290px;
@@ -98,4 +132,10 @@ p {
 }
 #miranda-reaching-2.visible {
   opacity: 1;
+}
+
+ {
+  position: absolute;
+  bottom: 580px;
+  left: 500px;
 }

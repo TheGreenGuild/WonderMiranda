@@ -1,71 +1,72 @@
-/* Explanation of JavaScript:
-
-    triggers: This selects all the elements with the class .trigger-block, which will act as your scroll triggers.
-    Intersection Observer: Observes each trigger element. When a trigger element enters the viewport, it checks the data-target attribute to identify the associated target element (like an image).
-    data-target: Each trigger uses a data-target attribute that specifies the ID of the target element (the element that will be animated or changed). This allows you to link multiple triggers to their respective target elements.
-    Dynamic Handling: The observer listens to each trigger independently, and each target element will respond accordingly.
-*/
-
+// Adds the funcitonality to tell which direction you're scrolling and adding/removing classes based on triggers. No more toggle trigger, I have to be explicit in what I add/remove now. But all the animations are reversible now! 
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all elements with the relevant data attributes
-  const toggleTriggers = document.querySelectorAll('[data-toggle-visible]');
-  const removeTriggers = document.querySelectorAll('[data-remove-visible]');
-  const addTriggers = document.querySelectorAll('[data-add-visible]');
+  const wrapper = document.querySelector('.wrapper');
 
-  const toggleObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Find the corresponding images using the data-toggle-visible attribute
-      const targetIds = entry.target.dataset.toggleVisible.split(',');
+  let lastScrollY = wrapper.scrollTop;
+  let scrollDirection = 'down';
+  let hasScrolled = false;
 
-      targetIds.forEach(id => {
-        const targetImage = document.querySelector(`#${id.trim()}`);
-
-        if (entry.isIntersecting && targetImage) {
-          // Add the 'visible' class to the target when the trigger enters the viewport
-          targetImage.classList.add('visible');
-        } else if (targetImage) {
-          // Remove the 'visible' class when the trigger leaves the viewport
-          targetImage.classList.remove('visible');
-        }
-      });
-    });
+  wrapper.addEventListener('scroll', () => {
+    hasScrolled = true;
+    const currentScrollY = wrapper.scrollTop;
+    scrollDirection = (currentScrollY > lastScrollY) ? 'down' : 'up';
+    lastScrollY = currentScrollY;
   });
 
-  const removeObserver = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // Find the corresponding images using the data-remove-visible attribute
-      const targetIds = entry.target.dataset.removeVisible.split(',');
+      if (!hasScrolled) return; // Skip logic if the user hasn't scrolled yet
 
-      targetIds.forEach(id => {
-        const targetImage = document.querySelector(`#${id.trim()}`);
+      const el = entry.target;
+      const isVisible = entry.isIntersecting;
 
-        if (entry.isIntersecting && targetImage) {
-          // Remove the 'visible' class when the remove-trigger enters the viewport
-          targetImage.classList.remove('visible');
-        }
-      });
+      // Handle data-add-visible
+      if (el.dataset.addVisible) {
+        const targetIds = el.dataset.addVisible.split(',').map(id => id.trim());
+        targetIds.forEach(id => {
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          if (scrollDirection === 'down' && isVisible) {
+            target.classList.add('visible');
+            console.log(`Added visible to #${id}`)
+          }
+          if (scrollDirection === 'up' && !isVisible) {
+            target.classList.remove('visible');
+            console.log(`Removed visible from #${id}`)
+          }
+        });
+      }
+
+      // Handle data-remove-visible
+      if (el.dataset.removeVisible) {
+        const targetIds = el.dataset.removeVisible.split(',').map(id => id.trim());
+        targetIds.forEach(id => {
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          if (scrollDirection === 'down' && isVisible) {
+            target.classList.remove('visible');
+            console.log(`Removed visible from #${id}`)
+          }
+          if (scrollDirection === 'up' && !isVisible) {
+            target.classList.add('visible');
+            console.log(`Added visible to #${id}`)
+          }
+        });
+      }
+
     });
+  }, {
+    root: wrapper,
+    threshold: 0.01 //What percent of the trigger needs to be on page before the add/remove stuff happens
   });
 
-  const addObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Find the corresponding images using the data-add-visible attribute
-      const targetIds = entry.target.dataset.addVisible.split(',');
-
-      targetIds.forEach(id => {
-        const targetImage = document.querySelector(`#${id.trim()}`);
-
-        if (entry.isIntersecting && targetImage) {
-          // Add the 'visible' class when the add-trigger enters the viewport
-          targetImage.classList.add('visible');
-        }
-      });
-    });
+  // Find all triggers and observe them
+  const allTriggers = document.querySelectorAll('[data-add-visible], [data-remove-visible]');
+  allTriggers.forEach(trigger => {
+    console.log('Observing trigger:', trigger);
+    observer.observe(trigger);
   });
-
-  // Observe each element with the relevant data attributes
-  toggleTriggers.forEach(trigger => toggleObserver.observe(trigger));
-  removeTriggers.forEach(removeTrigger => removeObserver.observe(removeTrigger));
-  addTriggers.forEach(addTrigger => addObserver.observe(addTrigger));
 });
 
