@@ -51,8 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let lastScrollY = wrapper.scrollTop;
   let scrollDirection = 'down';
+  let hasScrolled = false;
 
   wrapper.addEventListener('scroll', () => {
+    hasScrolled = true;
     const currentScrollY = wrapper.scrollTop;
     scrollDirection = (currentScrollY > lastScrollY) ? 'down' : 'up';
     lastScrollY = currentScrollY;
@@ -60,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      if (!hasScrolled) return; // Skip logic if the user hasn't scrolled yet
+
       const el = entry.target;
       const isVisible = entry.isIntersecting;
 
@@ -72,9 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (scrollDirection === 'down' && isVisible) {
             target.classList.add('visible');
+            console.log(`Added visible to #${id}`)
           }
           if (scrollDirection === 'up' && !isVisible) {
             target.classList.remove('visible');
+            console.log(`Removed visible from #${id}`)
           }
         });
       }
@@ -86,11 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
           const target = document.getElementById(id);
           if (!target) return;
 
-          if (scrollDirection === 'up' && isVisible) {
+          if (scrollDirection === 'down' && isVisible) {
             target.classList.remove('visible');
+            console.log(`Removed visible from #${id}`)
           }
-          if (scrollDirection === 'down' && !isVisible) {
+          if (scrollDirection === 'up' && !isVisible) {
             target.classList.add('visible');
+            console.log(`Added visible to #${id}`)
           }
         });
       }
@@ -98,11 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, {
     root: wrapper,
-    threshold: 0
+    threshold: 0.01 //What percent of the trigger needs to be on page before the add/remove stuff happens
   });
 
   // Find all triggers and observe them
   const allTriggers = document.querySelectorAll('[data-add-visible], [data-remove-visible]');
-  allTriggers.forEach(trigger => observer.observe(trigger));
+  allTriggers.forEach(trigger => {
+    console.log('Observing trigger:', trigger);
+    observer.observe(trigger);
+  });
 });
 
