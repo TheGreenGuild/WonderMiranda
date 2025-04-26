@@ -78,7 +78,7 @@ p {
   opacity: 0;
   transition: opacity 0.1s ease-out;
 }
-#father-raises-voice.active {
+#father-raises-voice.visible {
   opacity: 1;
 }
 
