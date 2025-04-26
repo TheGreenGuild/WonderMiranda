@@ -46,66 +46,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('.wrapper');
 
+  let lastScrollY = wrapper.scrollTop;
+  let scrollDirection = 'down';
 
-// Commenting this part out until I understand better how this all works. 
+  wrapper.addEventListener('scroll', () => {
+    const currentScrollY = wrapper.scrollTop;
+    scrollDirection = (currentScrollY > lastScrollY) ? 'down' : 'up';
+    lastScrollY = currentScrollY;
+  });
 
-//   // === Unified Intersection Observer ===
-//   const allTriggers = document.querySelectorAll('[data-toggle-visible], [data-add-visible], [data-remove-visible]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      const isVisible = entry.isIntersecting;
 
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//       const el = entry.target;
+      // Handle data-add-visible
+      if (el.dataset.addVisible) {
+        const targetIds = el.dataset.addVisible.split(',').map(id => id.trim());
+        targetIds.forEach(id => {
+          const target = document.getElementById(id);
+          if (!target) return;
 
-//       // Helper to apply/remove classes based on logic
-//       const handleTargets = (dataAttr, onEnter, onExit) => {
-//         const raw = el.getAttribute(dataAttr);
-//         if (!raw) return;
+          if (scrollDirection === 'down' && isVisible) {
+            target.classList.add('visible');
+          }
+          if (scrollDirection === 'up' && !isVisible) {
+            target.classList.remove('visible');
+          }
+        });
+      }
 
-//         const targetIds = raw.split(',').map(id => id.trim());
-//         targetIds.forEach(id => {
-//           const target = document.getElementById(id);
-//           if (!target) return;
+      // Handle data-remove-visible
+      if (el.dataset.removeVisible) {
+        const targetIds = el.dataset.removeVisible.split(',').map(id => id.trim());
+        targetIds.forEach(id => {
+          const target = document.getElementById(id);
+          if (!target) return;
 
-//           if (entry.isIntersecting) {
-//             onEnter(target);
-//           } else {
-//             onExit(target);
-//           }
-//         });
-//       };
+          if (scrollDirection === 'up' && isVisible) {
+            target.classList.remove('visible');
+          }
+          if (scrollDirection === 'down' && !isVisible) {
+            target.classList.add('visible');
+          }
+        });
+      }
 
-//       // === Logic per Attribute ===
+    });
+  }, {
+    root: wrapper,
+    threshold: 0
+  });
 
-//       // TOGGLE: Applies visible on enter, removes on exit — direction matters
-//       handleTargets('data-toggle-visible',
-//         target => {
-//           if (scrollDirection === 'down') target.classList.add('visible');
-//           else if (scrollDirection === 'up') target.classList.remove('visible');
-//         },
-//         target => {
-//           if (scrollDirection === 'down') target.classList.remove('visible');
-//           else if (scrollDirection === 'up') target.classList.add('visible');
-//         }
-//       );
+  // Find all triggers and observe them
+  const allTriggers = document.querySelectorAll('[data-add-visible], [data-remove-visible]');
+  allTriggers.forEach(trigger => observer.observe(trigger));
+});
 
-//       // ADD: Always adds when entering
-//       handleTargets('data-add-visible',
-//         target => target.classList.add('visible'),
-//         () => { } // No removal on exit
-//       );
-
-//       // REMOVE: Always removes when entering
-//       handleTargets('data-remove-visible',
-//         target => target.classList.remove('visible'),
-//         () => { } // No reversal on exit
-//       );
-//     });
-//   }, 
-//   {
-//     root: stage, 
-//     threshold: 0.1
-//   });
-
-//   allTriggers.forEach(trigger => observer.observe(trigger));
-// });

@@ -68,3 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
   removeTriggers.forEach(removeTrigger => removeObserver.observe(removeTrigger));
   addTriggers.forEach(addTrigger => addObserver.observe(addTrigger));
 });
+
