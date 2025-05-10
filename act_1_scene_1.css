@@ -1,6 +1,5 @@
-
-  /*Sets up parralax within the wrapper I believe. This is on the main css file. Here for reference only*/
-  /* .wrapper {
+/*Sets up parralax within the wrapper I believe. This is on the main css file. Here for reference only*/
+/* .wrapper {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -11,22 +10,22 @@
   } */
 
 .main_stage {
-    /* background-color: rgb(97, 105, 51); */
-    overflow: hidden;
+  /* background-color: rgb(97, 105, 51); */
+  overflow: hidden;
 }
 
 .scene-header-navigation {
-    z-index: 2;
+  z-index: 2;
 }
 
 .foreground-rain {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    z-index: 1;
-    pointer-events: none; /* Makes the rain invisible to mouse interactions */
-    object-fit: cover;
-    opacity: 60%;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+  pointer-events: none; /* Makes the rain invisible to mouse interactions */
+  object-fit: cover;
+  opacity: 60%;
 }
 
 .first_background {
@@ -38,19 +37,19 @@
 }
 
 .act-header {
-    color: white;
-    font-size: 8rem;
+  color: white;
+  font-size: 8rem;
 }
 
 p {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .miranda-face {
-    width: 50%;
-    z-index: -9;
-    transform: translateZ(-100px) translateY(200px) scale(2); /*Adds parralax to the background*/
+  width: 50%;
+  z-index: -9;
+  transform: translateZ(-100px) translateY(200px) scale(2); /*Adds parralax to the background*/
 }
 
 .prospero-casting-rail {
@@ -64,7 +63,7 @@ p {
   align-items: center;
 }
 
-#prospero-casting-1{
+#prospero-casting-1 {
   opacity: 0;
   transition: opacity 0.1s ease-out;
 }
@@ -94,7 +93,7 @@ p {
 
 #anger-is-power {
   position: absolute;
-  bottom: 580px;
+  bottom: 550px;
   left: 300px;
   opacity: 0;
   transition: opacity 0.1s ease-out;
@@ -102,9 +101,6 @@ p {
 
 #anger-is-power.visible {
   opacity: 1;
-  position: absolute;
-  bottom: 580px;
-  left: 300px;
 }
 
 #miranda-reaching-1 {
@@ -117,10 +113,15 @@ p {
   opacity: 1;
 }
 
- {
+#after-all {
   position: absolute;
-  bottom: 580px;
-  left: 400px;
+  bottom: 500px;
+  left: 630px;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+#after-all.visible {
+  opacity: 1;
 }
 
 #miranda-reaching-2 {
@@ -134,8 +135,13 @@ p {
   opacity: 1;
 }
 
- {
+#who-can-stand {
   position: absolute;
-  bottom: 580px;
-  left: 500px;
+  bottom: 500px;
+  left: 515px;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+#who-can-stand.visible {
+  opacity: 1;
 }

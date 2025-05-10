@@ -60,23 +60,23 @@
       <div class="prospero-casting-rail">
         <div class="prospero-casting-cart">
           <img id="prospero-casting-1" data-add-visible="prospero-casting-1" src="assets/act_1_scene_1/bg-4-prospero-1-cropped.png">
-          <p id="father-raises-voice" class="copy-2">Your father raises his voice,<br>and he is obeyed</p>
+          <p id="father-raises-voice" data-add-visible="father-raises-voice" class="copy-2">Your father raises his voice,<br>and he is obeyed.</p>
           <img id="prospero-casting-2" src="assets/act_1_scene_1/bg-4-prospero-2-cropped.png">
           <p id="anger-is-power" class="copy-2">Anger is his power.<br>To be loved means to submit</p>
           <img id="miranda-reaching-1" src="assets/act_1_scene_1/f2.png">
-          <p id="after-all" class="copy-2">After all-</p>
+          <p id="after-all" class="copy-2">After all -</p>
           <img id="miranda-reaching-2" src="assets/act_1_scene_1/f3.png">
           <p id="who-can-stand" class="copy-2">who can stand against a storm?</p>
         </div>
 
-        <div class="buffer-150" data-add-visible="father-raises-voice" ></div>
+        <div class="buffer-150"></div>
         <div class="buffer-150 trigger" data-add-visible="miranda-reaching-1, anger-is-power"
           data-remove-visible="father-raises-voice"></div>
 
-        <div class="buffer-150 trigger" data-add-visible="prospero-casting-2" data-remove-visible="prospero-casting-1">
+        <div class="buffer-150 trigger" data-add-visible="prospero-casting-2, after-all" data-remove-visible="prospero-casting-1, anger-is-power">
         </div>
         <div class="buffer-150 trigger" data-add-visible=""></div>
-        <div class="buffer-150 trigger" data-add-visible="miranda-reaching-2" data-remove-visible="miranda-reaching-1">
+        <div class="buffer-150 trigger" data-add-visible="miranda-reaching-2, who-can-stand" data-remove-visible="miranda-reaching-1, after-all">
         </div>
         <div class="buffer-150 trigger" data-remove-visible="prospero-casting-2"></div>
 
